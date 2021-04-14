@@ -15,7 +15,7 @@ Simple AWS S3 request command-line tool written in Python which supports both v2
 
 <pre>
 $ ./s3_request.py -h
-usage: s3_request.py [-h] (-a ACCESS | -t TOKEN)
+usage: s3_request.py [-h] (-a ACCESS | -t TOKEN) [--version]
                      [-m {GET,PUT,POST,HEAD,DELETE}] [-c CONTENT_TYPE]
                      [-si {v2,v4}] [-r REGION] [-se SERVICE] -u URL [-cv]
                      [-of OUTPUT_FILE | -pr | -js] [-q | -v]
@@ -29,6 +29,7 @@ optional arguments:
                         aws access key &lt;id:secret&gt;, eg: myid:mysecret
   -t TOKEN, --token TOKEN
                         aws access token
+  --version             show program's version number and exit
   -m {GET,PUT,POST,HEAD,DELETE}, --method {GET,PUT,POST,HEAD,DELETE}
                         request method (default: GET)
   -c CONTENT_TYPE, --content_type CONTENT_TYPE
