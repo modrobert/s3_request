@@ -63,7 +63,7 @@ optional arguments:
 
 ##### PUT object in bucket (copy file to bucket):
 <pre>
-s3_request.py -a access_key_id:secret_access_key -r "ap-southeast-1" -si v4 -m PUT -u "https://rvesterlund.s3.ap-southeast-1.amazonaws.com/README.md" -v -pf README.md -c "application/octet-stream"
+s3_request.py -a access_key_id:secret_access_key -r "ap-southeast-1" -si v4 -m PUT -u "https://footest.s3.ap-southeast-1.amazonaws.com/README.md" -v -pf README.md -c "application/octet-stream"
 
 
 --[AUTH]---------------------------------------------&gt;
@@ -74,7 +74,7 @@ Secret Access Key: secret_access_key
 
 --[REQUEST]------------------------------------------&gt;
 Request method: PUT
-Request URL: https://rvesterlund.s3.ap-southeast-1.amazonaws.com/README.md
+Request URL: https://footest.s3.ap-southeast-1.amazonaws.com/README.md
 Request headers: {"Content-Type": "application/octet-stream", "x-amz-content-sha256": "000426f28601c7a9685422a692354e6ca9bd2a19aa2d198785c69cf6beb3a4d1", "x-amz-date": "20200416T115044Z", "Authorization": "AWS4-HMAC-SHA256 Credential=access_key_id/20200416/ap-southeast-1/s3/aws4_request, SignedHeaders=content-type;host;x-amz-content-sha256;x-amz-date, Signature=d25fde29b0ba17b09323647abfb81b0472e661d83db26d38ebe940b4f047eb0c"}
 
 --[RESPONSE]-----------------------------------------&gt;
@@ -85,7 +85,7 @@ Response headers: {'x-amz-id-2': 'Jtf99RhxLhvCTuee75wOC31cxZrj1JPWy9St7TTzMsjnog
 
 ##### GET list of objects in bucket (list files in bucket):
 <pre>
-s3_request.py -a access_key_id:secret_access_key -r "ap-southeast-1" -si v4 -m GET -u "https://rvesterlund.s3.ap-southeast-1.amazonaws.com/?" -v -pr
+s3_request.py -a access_key_id:secret_access_key -r "ap-southeast-1" -si v4 -m GET -u "https://footest.s3.ap-southeast-1.amazonaws.com/?" -v -pr
 
 --[AUTH]---------------------------------------------&gt;
 HTTPS cert verification: False
@@ -95,7 +95,7 @@ Secret Access Key: secret_access_key
 
 --[REQUEST]------------------------------------------&gt;
 Request method: GET
-Request URL: https://rvesterlund.s3.ap-southeast-1.amazonaws.com/
+Request URL: https://footest.s3.ap-southeast-1.amazonaws.com/
 Request headers: {"x-amz-content-sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "x-amz-date": "20200416T115047Z", "Authorization": "AWS4-HMAC-SHA256 Credential=access_key_id/20200416/ap-southeast-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=fafff689437853872b79087e8ee7b024c69b6ea14b2795f1d821711f5c0e5cf7"}
 
 --[RESPONSE]-----------------------------------------&gt;
@@ -105,7 +105,7 @@ Response headers: {'x-amz-id-2': 'hEe+7KneI0LmY8/JwV+1Tt+Cye1dK7J/uzxlnXcZ9YFZKn
 Response content (pretty):
 &lt;?xml version="1.0" ?&gt;
 &lt;ListBucketResult xmlns="http://s3.amazonaws.com/doc/2006-03-01/"&gt;
-	&lt;Name&gt;rvesterlund&lt;/Name&gt;
+	&lt;Name&gt;footest&lt;/Name&gt;
 	&lt;Prefix/&gt;
 	&lt;Marker/&gt;
 	&lt;MaxKeys&gt;1000&lt;/MaxKeys&gt;
@@ -127,7 +127,7 @@ Response content (pretty):
 
 ##### GET object from bucket and save to file (copy file from bucket):
 <pre>
-s3_request.py -a access_key_id:secret_access_key -r "ap-southeast-1" -si v4 -m GET -u "https://rvesterlund.s3.ap-southeast-1.amazonaws.com/README.md" -v -of /tmp/test.txt
+s3_request.py -a access_key_id:secret_access_key -r "ap-southeast-1" -si v4 -m GET -u "https://footest.s3.ap-southeast-1.amazonaws.com/README.md" -v -of /tmp/test.txt
 
 --[AUTH]---------------------------------------------&gt;
 HTTPS cert verification: False
@@ -137,7 +137,7 @@ Secret Access Key: secret_access_key
 
 --[REQUEST]------------------------------------------&gt;
 Request method: GET
-Request URL: https://rvesterlund.s3.ap-southeast-1.amazonaws.com/README.md
+Request URL: https://footest.s3.ap-southeast-1.amazonaws.com/README.md
 Request headers: {"x-amz-content-sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "x-amz-date": "20200416T124238Z", "Authorization": "AWS4-HMAC-SHA256 Credential=access_key_id/20200416/ap-southeast-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=0d9f6be7cd8eb5e5efebaf6841c4be6d25e5befe5573f2f0fe9c4515bca25fdf"}
 
 --[RESPONSE]-----------------------------------------&gt;
@@ -151,7 +151,7 @@ Done.
 
 ##### DELETE object in bucket (delete file):
 <pre>
-s3_request.py -a access_key_id:secret_access_key -r "ap-southeast-1" -si v4 -m DELETE -u "https://rvesterlund.s3.ap-southeast-1.amazonaws.com/README.md" -v
+s3_request.py -a access_key_id:secret_access_key -r "ap-southeast-1" -si v4 -m DELETE -u "https://footest.s3.ap-southeast-1.amazonaws.com/README.md" -v
 
 --[AUTH]---------------------------------------------&gt;
 HTTPS cert verification: False
@@ -161,7 +161,7 @@ Secret Access Key: secret_access_key
 
 --[REQUEST]------------------------------------------&gt;
 Request method: DELETE
-Request URL: https://rvesterlund.s3.ap-southeast-1.amazonaws.com/README.md
+Request URL: https://footest.s3.ap-southeast-1.amazonaws.com/README.md
 Request headers: {"x-amz-content-sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855", "x-amz-date": "20200416T115028Z", "Authorization": "AWS4-HMAC-SHA256 Credential=access_key_id/20200416/ap-southeast-1/s3/aws4_request, SignedHeaders=host;x-amz-content-sha256;x-amz-date, Signature=21d578f12a9030f4bceb877026a3d058ae91c59e94d78dbb8a9526cafd09dc60"}
 
 --[RESPONSE]-----------------------------------------&gt;
